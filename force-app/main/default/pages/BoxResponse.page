@@ -1,0 +1,42 @@
+<apex:page controller="Box_Authorize" action="{! readCode}" >
+    <apex:form >
+    	<apex:pageBlock title="Box_Token Request">
+            <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="RequestToken" action="{!requestToken}" reRender="one" />
+            </apex:pageBlockButtons>
+            
+            <apex:pageBlockSection columns="1">
+            	<apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Client_Id"></apex:outputLabel>
+                    <apex:inputText value="{!clientId}" size="80"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Client_Secret"></apex:outputLabel>
+                    <apex:inputText value="{!clientSecret}" size="80"></apex:inputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Code"></apex:outputLabel>
+                    <apex:outputText value="{!code}"></apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                	<apex:outputLabel value="Re-direct Url"></apex:outputLabel>
+                    <apex:outputText value="{!callback}" ></apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Access Token" id="one" />
+                    <apex:outputText value="{!accessToken}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        
+        <apex:pageBlock >
+        <apex:pageBlockButtons location="top" >
+                <apex:commandButton value="Click to view Item list in parent directory" action="{!getListItemInFolder}" />
+            </apex:pageBlockButtons>
+            <apex:pageBlockSection >
+            	{!result2}
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

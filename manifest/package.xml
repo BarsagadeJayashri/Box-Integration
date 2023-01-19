@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Box_Authorize</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>BoxToken</members>
+        <members>BoxCode</members>
+        <name>RemoteSiteSetting</name>
+    </types>
+    <types>
+        <members>Box__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>BoxHomepage</members>
+        <members>BoxResponse</members>
+        <name>ApexPage</name>
+    </types>
+    <version>55.0</version>
+</Package>
